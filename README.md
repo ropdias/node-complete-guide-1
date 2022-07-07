@@ -1,11 +1,11 @@
-# node-complete-guide-section-3
+# Node.js: Understanding the Basics
 
 Examples from the **"Section 3: Understanding the Basics"** of the course **"NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)"** by Academind (Maximilian Schwarzmüller).
 
 This section covered:
 
-- [ ] How the Web Works
-- [ ] Creating a Node Server
+- [x] How the Web Works
+- [x] Creating a Node Server
 - [ ] The Node Lifecycle & Event Loop
 - [ ] Controlling the Node.js Process
 - [ ] Understanding Requests
