@@ -16,7 +16,7 @@ This section covered:
 - [x] Parsing Request Bodies
 - [x] Understanding Event Driven Code Execution
 - [x] Blocking and Non-Blocking Code
-- [ ] Node.js - Looking Behind the Scenes
-- [ ] Using the Node Modules System
+- [x] Node.js - Looking Behind the Scenes
+- [x] Using the Node Modules System
 
 More info: https://www.udemy.com/course/nodejs-the-complete-guide/
