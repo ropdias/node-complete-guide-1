@@ -12,7 +12,7 @@ This section covered:
 - [x] Sending Responses
 - [x] Request & Response Headers
 - [x] Routing Requests
-- [ ] Redirecting Requests
+- [x] Redirecting Requests
 - [ ] Parsing Request Bodies
 - [ ] Understanding Event Driven Code Execution
 - [ ] Blocking and Non-Blocking Code

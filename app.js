@@ -1,9 +1,11 @@
 const http = require("http");
+const fs = require("fs");
 
 // A request listener is a function that will be executed for every incoming request
 const server = http.createServer((req, res) => {
   // console.log(req.url, req.method, req.headers);
   const url = req.url;
+  const method = req.method;
   if (url === "/") {
     res.write("<html>");
     res.write("<head><title>Enter Message</title></head>");
@@ -14,6 +16,17 @@ const server = http.createServer((req, res) => {
 
     // Here you send the response back to the client
     // "return" is not required to return a response, we are just adding to skip the rest of the code
+    return res.end();
+  }
+
+  if (url === "/message" && method === "POST") {
+    fs.writeFileSync("message.txt", "DUMMY");
+
+    res.statusCode = 302;
+    res.setHeader("Location", "/");
+    // You can also write the two above lines in one step like this:
+    // res.writeHead(302, { Location: "/" });
+
     return res.end();
   }
 
