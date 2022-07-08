@@ -6,10 +6,10 @@ This section covered:
 
 - [x] How the Web Works
 - [x] Creating a Node Server
-- [ ] The Node Lifecycle & Event Loop
-- [ ] Controlling the Node.js Process
-- [ ] Understanding Requests
-- [ ] Sending Responses
+- [x] The Node Lifecycle & Event Loop
+- [x] Controlling the Node.js Process
+- [x] Understanding Requests
+- [x] Sending Responses
 - [ ] Request & Response Headers
 - [ ] Routing Requests
 - [ ] Redirecting Requests
