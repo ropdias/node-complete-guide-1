@@ -13,7 +13,7 @@ This section covered:
 - [x] Request & Response Headers
 - [x] Routing Requests
 - [x] Redirecting Requests
-- [ ] Parsing Request Bodies
+- [x] Parsing Request Bodies
 - [ ] Understanding Event Driven Code Execution
 - [ ] Blocking and Non-Blocking Code
 - [ ] Node.js - Looking Behind the Scenes

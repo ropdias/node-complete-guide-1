@@ -20,13 +20,22 @@ const server = http.createServer((req, res) => {
   }
 
   if (url === "/message" && method === "POST") {
-    fs.writeFileSync("message.txt", "DUMMY");
-
+    const body = [];
+    // Node.js will execute that function so often until it's done getting all the data out of our request
+    // On data this listener receives a chunk of data
+    req.on("data", (chunk) => {
+      console.log(chunk);
+      body.push(chunk); // We can push data to a const because it's pointing to the reference
+    });
+    req.on("end", () => {
+      const parsedBody = Buffer.concat(body).toString(); // We know that is a string in this case
+      const message = parsedBody.split("=")[1];
+      fs.writeFileSync("message.txt", message);
+    });
     res.statusCode = 302;
     res.setHeader("Location", "/");
     // You can also write the two above lines in one step like this:
     // res.writeHead(302, { Location: "/" });
-
     return res.end();
   }
 
