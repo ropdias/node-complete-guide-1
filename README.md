@@ -14,7 +14,7 @@ This section covered:
 - [x] Routing Requests
 - [x] Redirecting Requests
 - [x] Parsing Request Bodies
-- [ ] Understanding Event Driven Code Execution
+- [x] Understanding Event Driven Code Execution
 - [ ] Blocking and Non-Blocking Code
 - [ ] Node.js - Looking Behind the Scenes
 - [ ] Using the Node Modules System

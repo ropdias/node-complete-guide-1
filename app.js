@@ -27,21 +27,20 @@ const server = http.createServer((req, res) => {
       console.log(chunk);
       body.push(chunk); // We can push data to a const because it's pointing to the reference
     });
-    req.on("end", () => {
+    return req.on("end", () => {
       const parsedBody = Buffer.concat(body).toString(); // We know that is a string in this case
       const message = parsedBody.split("=")[1];
       fs.writeFileSync("message.txt", message);
+      res.statusCode = 302;
+      res.setHeader("Location", "/");
+      // You can also write the two above lines in one step like this:
+      // res.writeHead(302, { Location: "/" });
+      res.end();
     });
-    res.statusCode = 302;
-    res.setHeader("Location", "/");
-    // You can also write the two above lines in one step like this:
-    // res.writeHead(302, { Location: "/" });
-    return res.end();
   }
 
   // Good article about headers: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
   res.setHeader("Content-Type", "text/html");
-
   res.write("<html>");
   res.write("<head><title>My First Page</title></head>");
   res.write("<body><h1>Hello from my Node.js Server !</h1></body>");
