@@ -30,12 +30,13 @@ const server = http.createServer((req, res) => {
     return req.on("end", () => {
       const parsedBody = Buffer.concat(body).toString(); // We know that is a string in this case
       const message = parsedBody.split("=")[1];
-      fs.writeFileSync("message.txt", message);
-      res.statusCode = 302;
-      res.setHeader("Location", "/");
-      // You can also write the two above lines in one step like this:
-      // res.writeHead(302, { Location: "/" });
-      res.end();
+      fs.writeFile("message.txt", message, (err) => {
+        res.statusCode = 302;
+        res.setHeader("Location", "/");
+        // You can also write the two above lines in one step like this:
+        // res.writeHead(302, { Location: "/" });
+        res.end();
+      });
     });
   }
 
