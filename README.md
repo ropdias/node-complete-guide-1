@@ -10,8 +10,8 @@ This section covered:
 - [x] Controlling the Node.js Process
 - [x] Understanding Requests
 - [x] Sending Responses
-- [ ] Request & Response Headers
-- [ ] Routing Requests
+- [x] Request & Response Headers
+- [x] Routing Requests
 - [ ] Redirecting Requests
 - [ ] Parsing Request Bodies
 - [ ] Understanding Event Driven Code Execution
